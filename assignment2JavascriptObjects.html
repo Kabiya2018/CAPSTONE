@@ -1,0 +1,72 @@
+<!DOCTYPE html>  
+<html>  
+  
+<head>  
+    <title>  
+        JavaScript Math Object 
+    </title>  
+</head>  
+      
+<body>  
+   
+  <p id="GFG"></p> 
+
+        
+    <script>  
+        document.getElementById("GFG").innerHTML =  
+        "<p><b>Math.abs(-4.7):</b> " + Math.abs(-4.7) + "</p>" + 
+        "<p><b>Math.ceil(4.4):</b> " + Math.ceil(4.4) + "</p>" + 
+        "<p><b>Math.floor(4.7):</b> " + Math.floor(4.7) + "</p>" + 
+        "<p><b>Math.sin(90 * Math.PI / 180):</b> " +  
+                Math.sin(90 * Math.PI / 180) + "</p>" + 
+        "<p><b>Math.min(0, 150, 30, 20, -8, -200):</b> " + 
+                Math.min(0, 150, 30, 20, -8, -200) + "</p>" + 
+        "<p><b>Math.random():</b> " + Math.random() + "</p>"; 
+      
+      
+
+	var d = new Date();  
+  
+	document.write(d); 
+
+
+    function check(v1) {  
+        if (v1 == true)  
+            return (v1 + " is True.");  
+        else 
+            return (v1 + " is False.");  
+    }  
+  
+    // Adding a new property  
+    Boolean.prototype.myVar = false;  
+  
+    // Adding a new method  
+    Boolean.prototype.myMethod = check;  
+  
+    // Creating a new boolean object  
+    var Obj1 = new Boolean();  
+  
+    document.write(Obj1.myMethod(1) + "<br>");  
+    document.write(Obj1.myMethod(0) + "<br>");  
+    document.write("myVar = " + Obj1.myVar + "<br/>");  
+
+function gfg() { 
+        var geek = Boolean(1); 
+        var geeks = Boolean(0); 
+  
+        var string = 
+            String(geek) + "<br>" + 
+            String(geeks); 
+  
+        document.write(string); 
+    } 
+    gfg(); 
+
+
+
+</script> 
+	
+ 
+</body>  
+  
+</html>                     
