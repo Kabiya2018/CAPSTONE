@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+h1
+{
+align: centre;
+}
+
+
+body {background-color: blue;}
+</style>
+</head>
+<body>
+
+<h1><center> <u><strong>DETAILS </strong></u></center></h1> 
+
+<p><strong>Name:</strong></p>
+
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+<p><strong>ID and Password:</strong></p>
+
+<form action="/action_page.php">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+ 
+</form>
+
+
+<p><strong>Noumber of siblings:</strong></p>
+
+
+<form action="/action_page.php">
+  <label for="cars">Choose number:</label>
+  <select id="siblings">
+    <option value=""></option>
+    <option value="s0">Zero</option>
+    <option value="s1">One</option>
+    <option value="s2">Two</option>
+    <option value="more">2+</option>
+  </select><br>
+  <input type="submit">
+</form>
+<input type="submit" value="Validate" onclick="return Validate()" />
+<script type="text/javascript">
+    function Validate() {
+        var ddlFruits = document.getElementById("Siblings");
+        if (Siblings.value == "") {
+            
+            alert("Please select an option!");
+            return false;
+        }
+        return true;
+    }
+</script>
+<div id = "d1">
+<p><strong>Gender:</strong></p>
+<form>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+</form>
+<button onclick="checkm()">Check "Male"</button>
+<button onclick="checkf()">Check "Female"</button>
+
+<script>
+function checkm() {
+  document.getElementById("male").checked = true;
+}
+function checkf() {
+  document.getElementById("female").checked = true;
+}
+</script>
+</div>
+<div id=""d2>
+<p><strong>Language:</strong></p>
+<form action="/action_page.php">
+  <input type="checkbox" id="l1" name="l1" value="English">
+  <label for="l1"> English</label><br><br>
+  <input type="checkbox" id="l2" name="l2" value="Hindi">
+  <label for="l2"> Hindi</label><br><br>
+  <input type="checkbox" id="l3" name="l3" value="Spanish">
+  <label for="l3"> Spanish </label><br><br>
+  <input type="checkbox" id="l4" name="l4" value="German">
+  <label for="l4"> German </label><br><br>
+  <input type="checkbox" id="l5" name="l5" value="Others">
+  <label for="l5"> Others</label><br><br>
+  
+
+  <input type="submit" value="Submit">
+  <input type="reset">
+<script>
+</div>
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#d1").fadeIn();
+    $("#d2").fadeIn("slow");
+    $("#d13").fadeIn(3000);
+  });
+});
+</script>
+
+<br>
+<button>Click to fade in boxes</button>
+<br>
+
+</form> 
+
+</body>
+</html>
