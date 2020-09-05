@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+        jQuery Dimensions 
+    </title> 
+  
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
+  
+    <script> 
+        $(document).ready(function() { 
+            $("button").click(function() { 
+                var txt = ""; 
+                txt += "Width of div: " + $(".geeks").width() + "</br>"; 
+                txt += "Height of div: " + $(".geeks").height(); 
+                $(".geeks").html(txt); 
+            }); 
+        }); 
+    </script> 
+  
+    <style> 
+        .geeks { 
+            height: 100px; 
+            width: 350px; 
+            padding: 5px; 
+            margin: 3px; 
+            border: 2px solid black; 
+            background-color: #F0F3F4; 
+        } 
+          
+        h1 { 
+            color: green; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+    <center> 
+        <div class="geeks"> 
+            <h1>Jquerry</h1></div> 
+        <br> 
+        <button>Display width and height </button> 
+    </center> 
+</body> 
+  
+</html> 
