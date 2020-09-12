@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Parse Nested JSON Data in JavaScript</title>
+</head>
+<body>
+    <script>
+    
+    var json = `{
+        "book": {
+            "name": "Harry Potter and the Goblet of Fire",
+            "author": "J. K. Rowling",
+            "year": 2000,
+            "characters": ["Harry Potter", "Hermione Granger", "Ron Weasley"],
+            "genre": "Fantasy Fiction",
+            "price": {
+                "paperback": "$10.40", "hardcover": "$20.32", "kindle": "$4.11"
+            }
+        }
+    }`;
+    
+
+    
+   
+    var obj = JSON.parse(json);
+    
+    document.write(JSON.stringify(obj));
+    
+   
+    
+     function printValues(obj) {
+        for(var k in obj) {
+            if(obj[k] instanceof Object) {
+                printValues(obj[k]);
+            } else {
+                document.write("<br>"+obj[k] + "<br>");
+            };
+        }
+    };
+    
+    
+    printValues(obj);
+    
+    document.write("<hr>");
+    
+    
+    document.write("<br><br>" + obj["book"]["author"] + "<br>");  
+    document.write(obj["book"]["characters"][0] + "<br>");  
+    document.write(obj["book"]["price"]["hardcover"]);  
+    </script>
+</body>
+</html>
